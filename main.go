@@ -5,6 +5,7 @@ import (
 
 	"github.com/joshporter3/sorting-visualization/array"
 	"github.com/joshporter3/sorting-visualization/draw"
+	"github.com/joshporter3/sorting-visualization/game"
 )
 
 func main() {
@@ -17,6 +18,7 @@ func main() {
 	defer rl.CloseWindow()
 	for !rl.WindowShouldClose() {
 
+		game.HandleInput(arr)
 		draw.Draw(arr)
 	}
 }
